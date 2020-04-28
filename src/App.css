@@ -27,6 +27,20 @@
 .App-link {
   color: #61dafb;
 }
+.current-number {
+  font-size:120px;
+}
+.roll-button{
+  border: 1px solid white;
+  font-size:30px; 
+  color:white;
+  background: transparent;
+  border-radius: 15px;
+  padding: 16px;
+}
+.roll-button:active {
+  color: black;
+}
 
 @keyframes App-logo-spin {
   from {
