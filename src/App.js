@@ -37,6 +37,19 @@ class App extends React.Component {
     },1000);
   }
 
+  total = (firstNumber, secondNumber) => {
+    
+    if(firstNumber === 6 && secondNumber === 6){
+      return 12;
+    } else if(firstNumber === 6){
+      return secondNumber;
+    } else if(secondNumber === 6){
+      return firstNumber;
+    } else {
+      return firstNumber + secondNumber;
+    }
+  }
+
   render() {
     const {rolling, currentFirstDhayam, currentSecondDhayam} = this.state;
     return (
@@ -46,14 +59,16 @@ class App extends React.Component {
             rolling ? (
               <div className="dhayams-container">
                 {/* <p className="current-number">Rolling..</p> */}
+                <div className="dhayam-total">Rolling</div>
                 <div className="dhayakattai-box box-one"><img style={{height:'100%'}} src={logo}/></div>
                 <div className="dhayakattai-box box-two"><img style={{height:'100%'}} src={logo}/></div>
               </div>
             ) : (
+            
               <div className="dhayams-container">
                 {/* <p className="current-number">{currentDice}</p> */}
-
-            <div className="dhayakattai-box box-one">{currentFirstDhayam.value}</div>
+                <div className="dhayam-total">{this.total(currentFirstDhayam.numValue,currentSecondDhayam.numValue) || "Lets Roll"}</div>
+                <div className="dhayakattai-box box-one">{currentFirstDhayam.value}</div> 
                 <div className="dhayakattai-box box-two">{currentSecondDhayam.value}</div>
               </div>
             )

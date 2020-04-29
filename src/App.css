@@ -58,6 +58,9 @@
   font-size: 25px;
 }
 
+.dhayam-total{
+  font-size:50px;
+}
 .dhayams-container {
   width: 100%;
     display: flex;
