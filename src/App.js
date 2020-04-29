@@ -5,8 +5,8 @@ const _ = require('lodash');
 
 const possibilities = [
   { numValue: 1, value : "●" }, 
-  { numValue: 2, value: "●      ●" },
-  { numValue: 3, value: "●      ●      ●"}, 
+  { numValue: 2, value: "●                              ●" },
+  { numValue: 3, value: "●               ●              ●"}, 
   { numValue: 6, value:  " "}
 ];
 
@@ -44,13 +44,13 @@ class App extends React.Component {
         <header className="App-header">
           {
             rolling ? (
-              <div>
+              <div className="dhayams-container">
                 {/* <p className="current-number">Rolling..</p> */}
                 <div className="dhayakattai-box box-one">rolling</div>
                 <div className="dhayakattai-box box-two">rolling</div>
               </div>
             ) : (
-              <div>
+              <div className="dhayams-container">
                 {/* <p className="current-number">{currentDice}</p> */}
 
                 <div className="dhayakattai-box box-one">{currentFirstDhayam.value}</div>
@@ -60,7 +60,7 @@ class App extends React.Component {
           }
           
           <div>
-            <button className="roll-button" disabled={rolling} onClick={this.handleClickRoll}>Roll Dhayakattai</button>
+            <button className="roll-button" disabled={rolling} onClick={this.handleClickRoll}>Roll Dhaya kattai</button>
           </div>
         </header>
       </div>

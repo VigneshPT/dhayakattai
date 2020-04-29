@@ -47,7 +47,7 @@
 
 .dhayakattai-box {
   border: 1px solid white;
-  width: 180px;
+  width: 75%;
   height: 30px;
   margin: 12px;
   padding: 10px;
@@ -55,7 +55,14 @@
   color: black;
   white-space: pre;
   border-radius:10px;
-  line-height: 1.8;
+  font-size: 25px;
+}
+
+.dhayams-container {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes App-logo-spin {
