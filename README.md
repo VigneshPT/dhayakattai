@@ -1,5 +1,5 @@
 ### Roll your Dhayakattais virtually
-![](public/screenshot.png)
+<img src="public/screenshot.png" height="250px"/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
