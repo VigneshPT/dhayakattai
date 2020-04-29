@@ -55,11 +55,15 @@
   color: black;
   white-space: pre;
   border-radius:10px;
-  font-size: 25px;
+  font-size: 32px;
+}
+.box-one {
+  margin-bottom: 24px;
 }
 
 .dhayam-total{
-  font-size:50px;
+  font-size:100px;
+  margin-bottom: 30px;
 }
 .dhayams-container {
   width: 100%;
