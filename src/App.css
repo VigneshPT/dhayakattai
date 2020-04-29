@@ -1,5 +1,9 @@
+body {
+  background:  #282c34;
+}
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -71,7 +75,33 @@
     flex-direction: column;
     align-items: center;
 }
-
+.footer{
+  margin-bottom:20px;
+}
+.yt-link {
+  text-decoration: none;
+  color:#4183C4;
+}
+.forkme {
+    transform: rotate(45deg);
+    background-color: #FFF;
+    overflow: hidden;
+    position: fixed;
+    z-index: 300;
+    width: 207px;
+    right: -64px;
+    top: 32px;
+    border-style: solid;
+}
+.forkme a {
+    color: #404040;
+    display: block;
+    font: 13px Helvetica Neue,Arial,sans-serif;
+    margin: 0.05em 0px 0.075em;
+    padding: 0.6em;
+    text-align: center;
+    text-decoration: none;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

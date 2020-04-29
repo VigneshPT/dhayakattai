@@ -54,6 +54,9 @@ class App extends React.Component {
     const {rolling, currentFirstDhayam, currentSecondDhayam} = this.state;
     return (
       <div className="App">
+        <div className="forkme">
+            <a href="https://github.com/vigneshpt/dhayakattai">Fork me on Github</a>
+        </div>
         <header className="App-header">
           {
             rolling ? (
@@ -78,6 +81,7 @@ class App extends React.Component {
             <button className="roll-button" disabled={rolling} onClick={this.handleClickRoll}>Roll Dhaya kattai</button>
           </div>
         </header>
+        <div className="footer"><a className="yt-link" href="https://youtube.com/vigneshpt">Watch on YouTube: Vignesh P T</a></div>
       </div>
     );
   }
