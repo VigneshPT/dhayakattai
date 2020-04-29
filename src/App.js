@@ -3,14 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 const _ = require('lodash');
 
-const possibilities = [1,2,3,4,5,6,12];
+const possibilities = [
+  { numValue: 1, value : "●" }, 
+  { numValue: 2, value: "●      ●" },
+  { numValue: 3, value: "●      ●      ●"}, 
+  { numValue: 6, value:  " "}
+];
+
 
 class App extends React.Component {
 
   constructor(){
     super();
     this.state = {
-      currentDice: 0,
+      currentFirstDhayam: 0,
+      currentSecondDhayam: 0,
       rolling: false
     }
   }
@@ -23,27 +30,37 @@ class App extends React.Component {
     })
     setTimeout(()=> {
       this.setState({
-        currentDice: this.rollDhayakattai(),
+        currentFirstDhayam: this.rollDhayakattai(),
+        currentSecondDhayam: this.rollDhayakattai(),
         rolling: false
       })
-    },500);
+    },1000);
   }
 
   render() {
-    const {rolling, currentDice} = this.state;
+    const {rolling, currentFirstDhayam, currentSecondDhayam} = this.state;
     return (
       <div className="App">
         <header className="App-header">
           {
             rolling ? (
-              <p className="current-number">Rolling..</p>
+              <div>
+                {/* <p className="current-number">Rolling..</p> */}
+                <div className="dhayakattai-box box-one">rolling</div>
+                <div className="dhayakattai-box box-two">rolling</div>
+              </div>
             ) : (
-              <p className="current-number">{currentDice}</p>
+              <div>
+                {/* <p className="current-number">{currentDice}</p> */}
+
+                <div className="dhayakattai-box box-one">{currentFirstDhayam.value}</div>
+                <div className="dhayakattai-box box-two">{currentSecondDhayam.value}</div>
+              </div>
             )
           }
           
           <div>
-            <button className="roll-button" onClick={this.handleClickRoll}>Roll Dhayakattai</button>
+            <button className="roll-button" disabled={rolling} onClick={this.handleClickRoll}>Roll Dhayakattai</button>
           </div>
         </header>
       </div>
