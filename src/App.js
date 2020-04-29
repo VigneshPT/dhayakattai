@@ -46,14 +46,14 @@ class App extends React.Component {
             rolling ? (
               <div className="dhayams-container">
                 {/* <p className="current-number">Rolling..</p> */}
-                <div className="dhayakattai-box box-one">rolling</div>
-                <div className="dhayakattai-box box-two">rolling</div>
+                <div className="dhayakattai-box box-one"><img style={{height:'100%'}} src={logo}/></div>
+                <div className="dhayakattai-box box-two"><img style={{height:'100%'}} src={logo}/></div>
               </div>
             ) : (
               <div className="dhayams-container">
                 {/* <p className="current-number">{currentDice}</p> */}
 
-                <div className="dhayakattai-box box-one">{currentFirstDhayam.value}</div>
+            <div className="dhayakattai-box box-one">{currentFirstDhayam.value}</div>
                 <div className="dhayakattai-box box-two">{currentSecondDhayam.value}</div>
               </div>
             )
